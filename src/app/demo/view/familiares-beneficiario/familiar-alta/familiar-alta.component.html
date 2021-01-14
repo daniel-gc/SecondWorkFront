@@ -18,14 +18,14 @@
                             <div class="ui-g-12 ui-md-3 ui-lg-4">
                                 <span class="md-inputfield">
                                     <input id="inputApellidoPaterno" type="text" pInputText name="apPaternoInput" #apPaternoInput="ngModel" required="true"
-                                        [(ngModel)]="nuevoMiembroArquitecturaDTO.apellidoPaterno"/>
+                                        [(ngModel)]="nuevoMiembroArquitecturaDTO.apPaterno"/>
                                     <label>Apellido Paterno*</label>
                                 </span>
                             </div>
                             <div class="ui-g-12 ui-md-3 ui-lg-4">
                                 <span class="md-inputfield">
                                     <input id="inputApellidoMaterno" type="text" pInputText name="inputApellidoMaterno"
-                                        [(ngModel)]="nuevoMiembroArquitecturaDTO.apellidoMaterno"/>
+                                        [(ngModel)]="nuevoMiembroArquitecturaDTO.apMaterno"/>
                                     <label>Apellido materno</label>
                                 </span>
                             </div>
@@ -33,7 +33,7 @@
                                 <span class="md-inputfield">
                                     <p-calendar showButtonBar="true" [locale]="es" dateFormat="yy-mm-dd"
                                                 [monthNavigator]="true" [yearNavigator]="true" yearRange="1917:2019" name="fechaNac"
-                                                [(ngModel)]="nuevoMiembroArquitecturaDTO.fechaNacimiento" #fechaNac="ngModel" required="true"></p-calendar>
+                                                [(ngModel)]="nuevoMiembroArquitecturaDTO.fechaNaciomiento" #fechaNac="ngModel" required="true"></p-calendar>
                                     <label>Fecha de nacimiento*</label>
                                 </span>
                             </div>

@@ -23,12 +23,13 @@
                         <label>Contraseña</label>
                     </span>
                     </div>
-                    <div class="ui-g-12" align="left">
+                    <div class="ui-g-12" align="left" id="formularioLogin">
                         <!--                    <div class="card card-w-title">-->
                         <button pButton type="submit" label="Login" style="width: 100%" icon="ui-icon-account-circle" [disabled]="!f.valid"></button>
                         <p-slideMenu #menu [popup]="true" [model]="items" [viewportHeight]="180"></p-slideMenu>
                         <button type="button" pButton icon="ui-icon-person-add" label="Registro" (click)="menu.toggle($event)" style="width: 100%"></button>
                         <button pButton type="button" label="Olvidé mi contraseña" style="width: 100%" class="pink-btn" icon="ui-icon-help" [routerLink]="'/olvidePassw'"></button>
+                        <button pButton type="button" label="Screen" style="width: 100%" icon="ui-icon-account-circle" (click)="takeScreen()"></button>
                         <a href="https://pliis.mx:8443/" target="_blank" style="alignment: right">Página de bienvenida</a>
 
                     </div>

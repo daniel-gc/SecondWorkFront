@@ -45,7 +45,7 @@ export class ApplicationInitService {
     listaServicioRest: ServicioRestDTO[] = [];
 
     // Inicio. Declaraciones de los códigos de arquitectura
-    //public uriPLIIS = 'https://pliis.mx:8443/PLIIS';
+    // public uriPLIIS = 'https://pliis.mx:8443/PLIIS';
      public uriPLIIS = 'http://localhost:81/PLIIS'; // 3 .130.112.216
     // public uriPLIIS = 'http://3.130.112.216:8080/PLIIS';
 

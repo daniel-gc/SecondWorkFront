@@ -7,6 +7,7 @@ import {TokenService} from '../services/security/token.service';
 import {ConfirmationService, MenuItem, MessageService} from 'primeng/api';
 import {BlockUI, NgBlockUI} from 'ng-block-ui';
 import {NG_VALUE_ACCESSOR} from '@angular/forms';
+import domtoimage from 'dom-to-image';
 
 @Component({
   selector: 'app-login',
@@ -57,6 +58,21 @@ export class AppLoginComponent implements OnInit {
             }
         ];
     }
+
+    public takeScreen() {
+        const node = document.getElementById('formularioLogin');
+        if (node != null) {
+            domtoimage.toJpeg(node, { quality: 0.95 }).then(dataUrl => {
+                const link = document.createElement('a');
+                link.download = 'my-image-name.jpeg';
+                link.href = dataUrl;
+                link.click();
+            });
+        } else {
+            console.log('Sin elementos');
+        }
+    }
+
     onLogin(): void {
         this.blockUI.start('Espere por favor...');
         this.usuario = new LoginUsuario(this.form.nombreUsuario, this.form.password);

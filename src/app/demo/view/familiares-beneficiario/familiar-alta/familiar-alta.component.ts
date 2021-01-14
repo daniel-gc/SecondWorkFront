@@ -59,7 +59,6 @@ export class FamiliarAltaComponent implements OnInit {
         this.messageService.add({severity: 'error', summary: 'Error',
                 detail: 'Ocurrió un error en la búsqueda de datos requeridos.' +
                 ' Vuelva a cargar la página, si el problema persiste, contacte a su administrador'});
-    
     });
 
   }
